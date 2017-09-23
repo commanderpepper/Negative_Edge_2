@@ -8,6 +8,11 @@ import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Humza on 9/23/2017.
+ * Displays the games within Negative Edge.
+ */
+
 public class GameSelect extends AppCompatActivity {
 
     ArrayList<String> data;

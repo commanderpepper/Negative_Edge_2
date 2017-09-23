@@ -12,6 +12,8 @@ import java.util.List;
 
 /**
  * Created by Humza on 9/23/2017.
+ * Custom Adapter for Recycler View
+ * Utilizes buttons for the views
  */
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
