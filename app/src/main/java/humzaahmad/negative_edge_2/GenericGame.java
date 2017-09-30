@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Humza on 9/23/2017.
- * Gets the characters for whatever game was passed via the intent. 
+ * Gets the characters for whatever game was passed via the intent.
  */
 
 public class GenericGame extends AppCompatActivity {
