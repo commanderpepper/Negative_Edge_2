@@ -11,6 +11,8 @@ import java.util.ArrayList;
 /**
  * Created by Humza on 9/23/2017.
  * Displays the games within Negative Edge.
+ * This is the launcher activity for Negative Edge.
+ * Buttons lead to Character Select
  */
 
 public class GameSelect extends AppCompatActivity {
