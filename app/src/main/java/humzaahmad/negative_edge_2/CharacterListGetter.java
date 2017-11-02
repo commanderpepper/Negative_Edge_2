@@ -16,8 +16,7 @@ public class CharacterListGetter {
 
     public Map<String, List<String>>  characterList;
 
-    public CharacterListGetter(String gameName) {
-        this.gameName = gameName;
+    public CharacterListGetter() {
         characterList = new HashMap<String, List<String>>();
         
         ArrayList<String> super_turbo = new ArrayList<>();
@@ -64,9 +63,7 @@ public class CharacterListGetter {
         
     }
 
-    public String gameName;
-
-    public ArrayList<String> getCharacterList()
+    public ArrayList<String> getCharacterList(String gameName)
     {
         return (ArrayList<String>) characterList.get(gameName);
     }

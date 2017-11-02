@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.inqbarna.tablefixheaders.adapters.BaseTableAdapter;
 
-import humzaahmad.negative_edge_2.R;
 
 /**
  * Created by Humza on 2/16/2017.

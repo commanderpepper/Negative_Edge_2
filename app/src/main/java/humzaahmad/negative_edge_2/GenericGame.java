@@ -26,7 +26,7 @@ public class GenericGame extends AppCompatActivity {
         Intent intent = getIntent();
         String game = intent.getStringExtra("Text");
 
-        CharacterListGetter game_to_display = new CharacterListGetter(game);
+        CharacterListGetter game_to_display = new CharacterListGetter();
 
         //data = game_to_display.getCharacterList();
 
