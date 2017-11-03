@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by Humza on 9/23/2017.
@@ -26,9 +28,15 @@ public class GenericGame extends AppCompatActivity {
         Intent intent = getIntent();
         String game = intent.getStringExtra("Text");
 
+        //Logger log = Logger.getLogger("HUMZA");
+
+        //Logger.getLogger(Level.SEVERE, "game string is " + game);
+        //log.log(Level.SEVERE, game);
         CharacterListGetter game_to_display = new CharacterListGetter();
 
-        //data = game_to_display.getCharacterList();
+        data = game_to_display.getCharacterList(game);
+
+        /*
 
         data = new ArrayList<>();
         data.add("Ryu");
@@ -49,6 +57,7 @@ public class GenericGame extends AppCompatActivity {
         data.add("Akuma");
         data.add("Blanka");
 
+        */
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.character_list);
         GameAdapter gameAdapter = new GameAdapter(data, this);

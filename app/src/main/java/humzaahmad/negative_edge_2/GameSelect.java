@@ -26,7 +26,7 @@ public class GameSelect extends AppCompatActivity {
 
         data = new ArrayList<>();
         data.add("Super Street Fighter 2 Super Turbo");
-        data.add("Street Fighter Alpha 2");
+        //data.add("Street Fighter Alpha 2");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setActionBar(toolbar);

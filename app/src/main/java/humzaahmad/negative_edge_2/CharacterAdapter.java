@@ -1,9 +1,5 @@
 package humzaahmad.negative_edge_2;
 
-/**
- * Created by Humza on 11/1/2017.
- */
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.inqbarna.tablefixheaders.adapters.BaseTableAdapter;
-
 
 /**
  * Created by Humza on 2/16/2017.
@@ -68,9 +63,9 @@ public class CharacterAdapter extends BaseTableAdapter {
     {
         if(column == getColumnCount()-1)
         {
-            return 800;
+            return 1000;
         }
-        else {return 400;}
+        else {return 350;}
 
     }
 

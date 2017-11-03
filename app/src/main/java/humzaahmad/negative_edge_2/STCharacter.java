@@ -34,32 +34,48 @@ public class STCharacter extends AppCompatActivity {
         GetCharacterFromFile getCharacterFromFile = new GetCharacterFromFile(this);
 
         Map<String, String[]> stList = new HashMap<String, String[]>();
-        stList.put("Ryu", new String[]{"st_ryu", "st_o_ryu"});
-        stList.put("Ken", new String[]{"st_ken", "st_o_ken"});
-        stList.put("Chun Li", new String[]{"st_chunli", "st_o_chunli"});
-        stList.put("Sagat", new String[]{"st_sagat", "st_o_sagat"});
-        stList.put("Guile", new String[]{"st_guile", "st_o_guile"});
-        stList.put("Fei Long", new String[]{"st_feilong", "st_o_feilong"});
-        stList.put("Cammy", new String[]{"st_cammy", "st_o_cammy"});
-        stList.put("Dhalsim", new String[]{"st_dhalsim", "st_o_dhalsim"});
-        stList.put("Balrog", new String[]{"st_balrog", "st_o_balrog"});
-        stList.put("Vega", new String[]{"st_vega", "st_o_vega"});
-        stList.put("M Bison", new String[]{"st_mbison", "st_o_mbison"});
-        stList.put("E Honda", new String[]{"st_ehonda", "st_o_ehonda"});
-        stList.put("Dee Jay", new String[]{"st_deejay", "st_o_deejay"});
-        stList.put("T Hawk", new String[]{"st_thawk", "st_o_thawk"});
-        stList.put("Zangief", new String[]{"st_zangief", "st_o_zangief"});
-        stList.put("Blanka", new String[]{"st_blanka", "st_o_blanka"});
+        stList.put("Ryu", new String[]{"st_ryu", "st_o_ryu", "nwidth", "owidth"});
+        stList.put("Ken", new String[]{"st_ken", "st_o_ken", "nwidth", "owidth"});
+        stList.put("Chun Li", new String[]{"st_chunli", "st_o_chunli", "nwidth", "owidth"});
+        stList.put("Sagat", new String[]{"st_sagat", "st_o_sagat", "nwidth", "owidth"});
+        stList.put("Guile", new String[]{"st_guile", "st_o_guile", "nwidth", "owidth"});
+        stList.put("Fei Long", new String[]{"st_feilong", "st_o_feilong", "nwidth", "owidth"});
+        stList.put("Cammy", new String[]{"st_cammy", "st_o_cammy", "nwidth", "owidth"});
+        stList.put("Dhalsim", new String[]{"st_dhalsim", "st_o_dhalsim", "nwidth", "owidth"});
+        stList.put("Balrog", new String[]{"st_balrog", "st_o_balrog", "nwidth", "owidth"});
+        stList.put("Vega", new String[]{"st_vega", "st_o_vega", "vwidth", "gwidth"});
+        stList.put("M Bison", new String[]{"st_mbison", "st_o_mbison", "nwidth", "owidth"});
+        stList.put("E Honda", new String[]{"st_ehonda", "st_o_ehonda", "nwidth", "owidth"});
+        stList.put("Dee Jay", new String[]{"st_deejay", "st_o_deejay", "nwidth", "owidth"});
+        stList.put("T Hawk", new String[]{"st_thawk", "st_o_thawk", "gwidth", "ogwidth"});
+        stList.put("Zangief", new String[]{"st_zangief", "st_o_zangief", "gwidth", "ogwidth"});
+        stList.put("Blanka", new String[]{"st_blanka", "st_o_blanka", "nwidth", "owidth"});
+        stList.put("Akuma", new String[]{"st_akuma", "st_akuma", "nwidth"});
+
+        Map<String, Integer> tableWidth = new HashMap<>();
+        tableWidth.put("nwidth", 15);
+        tableWidth.put("gwidth", 14);
+        tableWidth.put("vwidth", 16);
+        tableWidth.put("owidth", 13);
+        tableWidth.put("ogwidth", 12);
 
 
-        ArrayList<String[]> characterData = null;
+        ArrayList<String[]> newCharacterData = null;
+        ArrayList<String[]> oldCharacterData = null;
+
         try {
-            characterData = getCharacterFromFile.readFile(stList.get(name)[0]);
+            newCharacterData = getCharacterFromFile.readFile(stList.get(name)[0]);
+            oldCharacterData = getCharacterFromFile.readFile(stList.get(name)[1]);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        newCharacter = getTable(characterData, 15);
+        newCharacter = getTable(newCharacterData, tableWidth.get(stList.get(name)[2]));
+        if(!name.equals("Akuma"))
+        {
+            oldCharacter = getTable(oldCharacterData, tableWidth.get(stList.get(name)[3]));
+        }
+
         TableFixHeaders tableFixHeaders = (TableFixHeaders) findViewById(R.id.char_table);
         tableFixHeaders.setAdapter(new CharacterAdapter(this, newCharacter));
     }
