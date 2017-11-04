@@ -25,6 +25,8 @@ public class STCharacter extends AppCompatActivity {
     private TableFixHeaders tableFixHeaders;
     TextView nameView;
     String name;
+    CharacterAdapter newAdapter;
+    CharacterAdapter oldAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +44,6 @@ public class STCharacter extends AppCompatActivity {
         if(name.equals("Akuma")) {
             switchButton.setVisibility(View.INVISIBLE);
         }
-
-
 
         GetCharacterFromFile getCharacterFromFile = new GetCharacterFromFile(this);
 
@@ -66,7 +66,6 @@ public class STCharacter extends AppCompatActivity {
         stList.put("Blanka", new String[]{"st_blanka", "st_o_blanka", "nwidth", "owidth"});
         stList.put("Akuma", new String[]{"st_akuma", "st_akuma", "nwidth"});
 
-
         /*
         When retrieving the data, a 'table width' needs to be passed.
         Most characters in ST need a tw of 15.
@@ -81,8 +80,7 @@ public class STCharacter extends AppCompatActivity {
         tableWidth.put("vwidth", 16);
         tableWidth.put("owidth", 13);
         tableWidth.put("ogwidth", 12);
-
-
+        
         ArrayList<String[]> newCharacterData = null;
         ArrayList<String[]> oldCharacterData = null;
 
@@ -97,37 +95,29 @@ public class STCharacter extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        newCharacter = getTable(newCharacterData, tableWidth.get(stList.get(name)[2]));
+        newCharacter = getCharacterFromFile.convertData(newCharacterData, tableWidth.get(stList.get(name)[2]));
+        newAdapter = new CharacterAdapter(this, newCharacter);
 
         if(!name.equals("Akuma"))
         {
-            oldCharacter = getTable(oldCharacterData, tableWidth.get(stList.get(name)[3]));
+            oldCharacter = getCharacterFromFile.convertData(oldCharacterData, tableWidth.get(stList.get(name)[3]));
+            oldAdapter = new CharacterAdapter(this, oldCharacter);
         }
-
 
         tableFixHeaders = (TableFixHeaders) findViewById(R.id.char_table);
-        tableFixHeaders.setAdapter(new CharacterAdapter(this, newCharacter));
-    }
-
-    public String[][] getTable(ArrayList<String[]> characterData, int tableWidth) {
-
-        String[][] characterInfo = new String[characterData.size()][tableWidth];
-        for (int i = 0; i < characterInfo.length; i++) {
-            characterInfo[i] = characterData.get(i);
-        }
-        return characterInfo;
+        tableFixHeaders.setAdapter(newAdapter);
     }
 
     public void switchOldAndNew(View view) {
         if(isNew)
         {
-            tableFixHeaders.setAdapter(new CharacterAdapter(this, oldCharacter));
+            tableFixHeaders.setAdapter(oldAdapter);
             nameView.setText("Old " + name);
             isNew = false;
         }
         else
         {
-            tableFixHeaders.setAdapter(new CharacterAdapter(this, newCharacter));
+            tableFixHeaders.setAdapter(newAdapter);
             nameView.setText(name);
             isNew = true;
         }

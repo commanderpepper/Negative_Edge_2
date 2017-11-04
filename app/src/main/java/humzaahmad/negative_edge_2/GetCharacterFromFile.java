@@ -37,4 +37,13 @@ public class GetCharacterFromFile {
         inputStream.close();
         return data;
     }
+
+    public String[][] convertData(ArrayList<String[]> characterData, int tableWidth)
+    {
+        String[][] characterInfo = new String[characterData.size()][tableWidth];
+        for (int i = 0; i < characterInfo.length; i++) {
+            characterInfo[i] = characterData.get(i);
+        }
+        return characterInfo;
+    }
 }
