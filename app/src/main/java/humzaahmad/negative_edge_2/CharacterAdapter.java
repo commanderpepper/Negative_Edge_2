@@ -65,7 +65,7 @@ public class CharacterAdapter extends BaseTableAdapter {
         {
             return 1500;
         }
-        else {return 425;}
+        else {return 550;}
 
     }
 

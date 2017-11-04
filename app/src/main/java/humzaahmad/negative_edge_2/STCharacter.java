@@ -80,7 +80,7 @@ public class STCharacter extends AppCompatActivity {
         tableWidth.put("vwidth", 16);
         tableWidth.put("owidth", 13);
         tableWidth.put("ogwidth", 12);
-        
+
         ArrayList<String[]> newCharacterData = null;
         ArrayList<String[]> oldCharacterData = null;
 

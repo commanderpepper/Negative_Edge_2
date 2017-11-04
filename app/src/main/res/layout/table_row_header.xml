@@ -4,8 +4,9 @@
     android:id="@android:id/text1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/table_header"
+    android:background="#d6dfff"
     android:gravity="fill"
     android:orientation="horizontal"
     android:padding="4dp"
+    android:textColor="@android:color/black"
     />
