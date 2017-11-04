@@ -7,5 +7,5 @@
     android:background="@drawable/table_header"
     android:gravity="fill"
     android:orientation="horizontal"
-    android:padding="8dp"
+    android:padding="4dp"
     />

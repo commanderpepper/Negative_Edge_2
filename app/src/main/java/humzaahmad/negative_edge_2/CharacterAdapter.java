@@ -63,9 +63,9 @@ public class CharacterAdapter extends BaseTableAdapter {
     {
         if(column == getColumnCount()-1)
         {
-            return 1000;
+            return 1500;
         }
-        else {return 350;}
+        else {return 425;}
 
     }
 

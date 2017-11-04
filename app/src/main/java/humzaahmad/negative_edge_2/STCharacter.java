@@ -3,6 +3,8 @@ package humzaahmad.negative_edge_2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.inqbarna.tablefixheaders.TableFixHeaders;
@@ -19,6 +21,10 @@ public class STCharacter extends AppCompatActivity {
 
     private String[][] newCharacter;
     private String[][] oldCharacter;
+    boolean isNew = true;
+    private TableFixHeaders tableFixHeaders;
+    TextView nameView;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +32,18 @@ public class STCharacter extends AppCompatActivity {
         setContentView(R.layout.activity_stcharacter);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra("Text");
+        name = intent.getStringExtra("Text");
 
-        TextView nameView = (TextView) findViewById(R.id.textView);
+        nameView = (TextView) findViewById(R.id.textView);
         nameView.setText(name);
+
+        Switch switchButton = (Switch) findViewById(R.id.switch1);
+
+        if(name.equals("Akuma")) {
+            switchButton.setVisibility(View.INVISIBLE);
+        }
+
+
 
         GetCharacterFromFile getCharacterFromFile = new GetCharacterFromFile(this);
 
@@ -52,6 +66,15 @@ public class STCharacter extends AppCompatActivity {
         stList.put("Blanka", new String[]{"st_blanka", "st_o_blanka", "nwidth", "owidth"});
         stList.put("Akuma", new String[]{"st_akuma", "st_akuma", "nwidth"});
 
+
+        /*
+        When retrieving the data, a 'table width' needs to be passed.
+        Most characters in ST need a tw of 15.
+        Grapplers (Gief and Hawk) tw is 14, old 12
+        Normal tw is 15, old 13
+        Vega tw is 16, he has two damage columns, clawed and clawless
+         */
+
         Map<String, Integer> tableWidth = new HashMap<>();
         tableWidth.put("nwidth", 15);
         tableWidth.put("gwidth", 14);
@@ -65,18 +88,24 @@ public class STCharacter extends AppCompatActivity {
 
         try {
             newCharacterData = getCharacterFromFile.readFile(stList.get(name)[0]);
-            oldCharacterData = getCharacterFromFile.readFile(stList.get(name)[1]);
+            if(!name.equals("Akuma"))
+            {
+                oldCharacterData = getCharacterFromFile.readFile(stList.get(name)[1]);
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         newCharacter = getTable(newCharacterData, tableWidth.get(stList.get(name)[2]));
+
         if(!name.equals("Akuma"))
         {
             oldCharacter = getTable(oldCharacterData, tableWidth.get(stList.get(name)[3]));
         }
 
-        TableFixHeaders tableFixHeaders = (TableFixHeaders) findViewById(R.id.char_table);
+
+        tableFixHeaders = (TableFixHeaders) findViewById(R.id.char_table);
         tableFixHeaders.setAdapter(new CharacterAdapter(this, newCharacter));
     }
 
@@ -87,5 +116,20 @@ public class STCharacter extends AppCompatActivity {
             characterInfo[i] = characterData.get(i);
         }
         return characterInfo;
+    }
+
+    public void switchOldAndNew(View view) {
+        if(isNew)
+        {
+            tableFixHeaders.setAdapter(new CharacterAdapter(this, oldCharacter));
+            nameView.setText("Old " + name);
+            isNew = false;
+        }
+        else
+        {
+            tableFixHeaders.setAdapter(new CharacterAdapter(this, newCharacter));
+            nameView.setText(name);
+            isNew = true;
+        }
     }
 }

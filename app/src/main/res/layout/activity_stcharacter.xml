@@ -32,6 +32,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:text="Switch"
+        android:onClick="switchOldAndNew"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/main_toolbar" />
 
@@ -66,6 +67,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-    
+
 
 </android.support.constraint.ConstraintLayout>
