@@ -11,6 +11,8 @@ import java.util.Map;
  * This class gets the character list for the games within Negative Edge.
  * It uses a HashMap where the keys are the Game Names and value is an array list populated with the game characters.
  * Future use might include storing old and new name for ST.
+ * @// TODO: 11/5/2017 Add the character files into this object 
+ * @// TODO: 11/5/2017 Add the character codes for old charaters in ST 
  */
 
 public class CharacterListGetter {

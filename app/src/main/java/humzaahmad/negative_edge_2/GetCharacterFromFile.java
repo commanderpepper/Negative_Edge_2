@@ -51,7 +51,7 @@ public class GetCharacterFromFile {
      * @param characterData - the ArrayList from the readFile method
      * @return a 2D array needed for fixedTableLayout
      */
-    public String[][] convertData(ArrayList<String[]> characterData, int tableWidth)
+    public String[][] convertData(ArrayList<String[]> characterData)
     {
         int tableWidth = characterData.get(0).length;
 
