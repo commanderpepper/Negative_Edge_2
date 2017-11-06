@@ -7,6 +7,13 @@ import android.os.Bundle;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * @author Humza Ahmad, commanderpepper
+ * Currently not in use, it will mimic STCharacter but far more simplifed for future games
+ * Also, multiple game characters will use this class
+ * @// TODO: 11/5/2017 Flesh out this class so in the future I can use it for games that don't have two versions. 
+ */
+
 public class GenericCharacter extends AppCompatActivity {
 
     @Override

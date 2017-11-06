@@ -3,9 +3,12 @@ package humzaahmad.negative_edge_2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.inqbarna.tablefixheaders.TableFixHeaders;
 
@@ -35,6 +38,9 @@ public class STCharacter extends AppCompatActivity {
 
         Intent intent = getIntent();
         name = intent.getStringExtra("Text");
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.st_toolbar);
+        setActionBar(toolbar);
 
         nameView = (TextView) findViewById(R.id.textView);
         nameView.setText(name);
@@ -121,5 +127,29 @@ public class STCharacter extends AppCompatActivity {
             nameView.setText(name);
             isNew = true;
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main_menu_options, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.about:
+                goToAbout();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void goToAbout() {
+        Intent intent = new Intent(this, About.class);
+        startActivity(intent);
     }
 }

@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".GenericGame" />
         <activity android:name=".GenericCharacter" />
-        <activity android:name=".STCharacter"></activity>
+        <activity android:name=".STCharacter" />
+        <activity android:name=".About"></activity>
     </application>
 
 </manifest>

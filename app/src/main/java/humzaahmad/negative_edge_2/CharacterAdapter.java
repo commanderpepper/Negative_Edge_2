@@ -9,7 +9,9 @@ import android.widget.TextView;
 import com.inqbarna.tablefixheaders.adapters.BaseTableAdapter;
 
 /**
- * Created by Humza on 2/16/2017.
+ * This is the Character Adapter for the FixedTableLayout library
+ * Currently it's used for Super Turbo only
+ * In the future, other adapters might be made for different games
  */
 
 public class CharacterAdapter extends BaseTableAdapter {
@@ -58,6 +60,13 @@ public class CharacterAdapter extends BaseTableAdapter {
         return converView;
     }
 
+    /**
+     * @param column the column. If the column is <code>-1</code> it is the header.
+     * @return width for each column
+     * -1 is the Move column
+     * 0 is the Start Up column
+     * getColumnCount()-1 is the Notes column
+     */
     @Override
     public int getWidth(int column)
     {
@@ -65,7 +74,15 @@ public class CharacterAdapter extends BaseTableAdapter {
         {
             return 1500;
         }
-        else {return 550;}
+        else if(column < 0)
+        {
+            return 425;
+        }
+        else if(column == 1)
+        {
+            return 550;
+        }
+        else {return 450;}
 
     }
 
@@ -74,6 +91,11 @@ public class CharacterAdapter extends BaseTableAdapter {
         return 150;
     }
 
+    /**
+     * @param row
+     * @param column
+     * @return a view that will be used for a particular cell
+     */
     public int getLayoutResource(int row, int column)
     {
         final int layoutResource;
@@ -97,6 +119,18 @@ public class CharacterAdapter extends BaseTableAdapter {
         return 3;
     }
 
+    /**
+     * @param row    The row of the item within the adapter's data table of the
+     *               item whose view we want. If the row is <code>-1</code> it is
+     *               the header.
+     * @param column The column of the item within the adapter's data table of the
+     *               item whose view we want. If the column is <code>-1</code> it
+     *               is the header.
+     * @return a number that indicates a type of row
+     *          <0 is the header
+     *          row % 2 are even rows
+     *          Rest are odd rows
+     */
     @Override
     public int getItemViewType(int row, int column) {
 

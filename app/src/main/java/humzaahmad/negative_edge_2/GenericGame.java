@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -27,6 +30,9 @@ public class GenericGame extends AppCompatActivity {
 
         Intent intent = getIntent();
         String game = intent.getStringExtra("Text");
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.character_toolbar);
+        setActionBar(toolbar);
 
         //Logger log = Logger.getLogger("HUMZA");
 
@@ -64,5 +70,29 @@ public class GenericGame extends AppCompatActivity {
         recyclerView.setAdapter(gameAdapter);
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main_menu_options, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.about:
+                goToAbout();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void goToAbout() {
+        Intent intent = new Intent(this, About.class);
+        startActivity(intent);
     }
 }

@@ -11,9 +11,12 @@ import android.widget.Button;
 import java.util.List;
 
 /**
+ * @author Humza Ahmad, commanderpepper
  * Created by Humza on 9/23/2017.
  * Custom Adapter for Recycler View
  * Utilizes buttons for the views
+ * Currently this adapter is used for the character list only.
+ * In the future I should change the onClick button to choose which class the intent points to.
  */
 
 public class GameAdapter extends RecyclerView.Adapter<GameAdapter.ViewHolder> {
@@ -90,6 +93,11 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.ViewHolder> {
             button.setOnClickListener(this);
         }
 
+        /**
+         * @param view - This is the button view
+         *             This class will start a new activity
+         * @// TODO: 11/5/2017 Change which class is passed to the intent. Ideally I should use one adapter for both the game list and character list.
+         */
         @Override
         public void onClick(View view) {
             String text = getText();

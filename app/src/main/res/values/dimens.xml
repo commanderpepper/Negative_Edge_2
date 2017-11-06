@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="aboutMarginTop">8dp</dimen>
+    <dimen name="aboutMarginStart">8dp</dimen>
+    <dimen name="about_page_text_size">13sp</dimen>
+</resources>

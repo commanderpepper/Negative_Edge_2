@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 /**
  * Created by Humza on 11/1/2017.
+ * @author Humza Ahmad, commanderpepper
+ * This class gets the data from the txt files in the res/raw folder
  */
 
 public class GetCharacterFromFile {
@@ -20,6 +22,13 @@ public class GetCharacterFromFile {
         this.parentContext = parentContext;
     }
 
+    /**
+     * @param filename - a filename, a character file txt file needs to passed through
+     * @return data - an array list populated by string arrays.
+     *                  Each string array represents a move.
+     *                  Each line in the txt file represents a move.
+     * @throws IOException
+     */
     public ArrayList<String []> readFile(String filename) throws IOException {
 
         ArrayList<String[]> data = new ArrayList<>();
@@ -38,8 +47,14 @@ public class GetCharacterFromFile {
         return data;
     }
 
+    /**
+     * @param characterData - the ArrayList from the readFile method
+     * @return a 2D array needed for fixedTableLayout
+     */
     public String[][] convertData(ArrayList<String[]> characterData, int tableWidth)
     {
+        int tableWidth = characterData.get(0).length;
+
         String[][] characterInfo = new String[characterData.size()][tableWidth];
         for (int i = 0; i < characterInfo.length; i++) {
             characterInfo[i] = characterData.get(i);

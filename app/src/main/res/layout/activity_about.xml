@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="humzaahmad.negative_edge_2.About">
+
+    <include
+        layout="@layout/main_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/about_toolbar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/aboutMarginStart"
+        android:layout_marginTop="@dimen/aboutMarginTop"
+        android:text="Negative Edge, a Super Turbo frame data app for Android"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/about_page_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_toolbar" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/aboutMarginStart"
+        android:layout_marginTop="@dimen/aboutMarginTop"
+        android:text="Frame Data From:"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/about_page_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/aboutMarginStart"
+        android:layout_marginTop="@dimen/aboutMarginTop"
+        android:autoLink="web"
+        android:text="http://wiki.shoryuken.com/Super_Street_Fighter_2_Turbo"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/about_page_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/aboutMarginStart"
+        android:layout_marginTop="@dimen/aboutMarginTop"
+        android:text="Uses the following:"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/about_page_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/aboutMarginStart"
+        android:layout_marginTop="@dimen/aboutMarginTop"
+        android:autoLink="web"
+        android:text="https://github.com/InQBarna/TableFixHeaders"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/about_page_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/aboutMarginStart"
+        android:layout_marginTop="@dimen/aboutMarginTop"
+        android:text="Contact:"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/about_page_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/aboutMarginStart"
+        android:layout_marginTop="@dimen/aboutMarginTop"
+        android:autoLink="email"
+        android:text="negativeedgeapp@gmail.com"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/about_page_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/aboutMarginStart"
+        android:layout_marginTop="@dimen/aboutMarginTop"
+        android:autoLink="web"
+        android:text="twitter.com/negativeedgeapp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/about_page_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+</android.support.constraint.ConstraintLayout>

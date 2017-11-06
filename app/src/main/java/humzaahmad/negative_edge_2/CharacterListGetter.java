@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * @author Humza Ahmad, commanderpepper
  * Created by Humza on 9/23/2017.
  * This class gets the character list for the games within Negative Edge.
  * It uses a HashMap where the keys are the Game Names and value is an array list populated with the game characters.
@@ -63,6 +64,10 @@ public class CharacterListGetter {
         
     }
 
+    /**
+     * @param gameName - the name of the game the user has chosen
+     * @return - the ArrayList that represents a game list of characters
+     */
     public ArrayList<String> getCharacterList(String gameName)
     {
         return (ArrayList<String>) characterList.get(gameName);
