@@ -1,4 +1,4 @@
-package humzaahmad.negative_edge_2.RecyclerView;
+package humzaahmad.negative_edge_2.Adapters.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,7 +22,7 @@ import humzaahmad.negative_edge_2.R;
  * In the future I should change the onClick button to choose which class the intent points to.
  */
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHolder> {
 
     private List<String> data;
     private Context context;
@@ -31,13 +31,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         return context;
     }
 
-    public CustomAdapter(List<String> data, Context context) {
+    public GameListAdapter(List<String> data, Context context) {
         this.data = data;
         this.context = context;
     }
 
     @Override
-    public CustomAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public GameListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         View button = layoutInflater.inflate(R.layout.single_button,parent, false);
@@ -46,7 +46,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(CustomAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(GameListAdapter.ViewHolder holder, int position) {
         String buttons = data.get(position);
         Button button = holder.button;
         button.setText(buttons);

@@ -10,9 +10,8 @@ import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
-import humzaahmad.negative_edge_2.Activites.About;
 import humzaahmad.negative_edge_2.R;
-import humzaahmad.negative_edge_2.RecyclerView.CustomAdapter;
+import humzaahmad.negative_edge_2.Adapters.RecyclerView.GameListAdapter;
 
 /**
  * Created by Humza on 9/23/2017.
@@ -32,13 +31,13 @@ public class GameSelect extends AppCompatActivity {
 
         data = new ArrayList<>();
         data.add("Super Street Fighter 2 Super Turbo");
-        //data.add("Street Fighter Alpha 2");
+        //characterList.add("Street Fighter Alpha 2");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.st_toolbar);
         setActionBar(toolbar);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.game_list);
-        CustomAdapter customAdapter = new CustomAdapter(data, this);
+        GameListAdapter customAdapter = new GameListAdapter(data, this);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

@@ -15,14 +15,14 @@ import java.util.Map;
  * @// TODO: 11/5/2017 Add the character codes for old charaters in ST
  */
 
-public class CharacterListGetter {
+public class CharacterLists {
 
     public Map<String, List<String>>  characterList;
     public ArrayList<String> super_turbo;
     public ArrayList<String> alpha_2;
     public Map<String, String[]> stList;
 
-    public CharacterListGetter() {
+    public CharacterLists() {
         characterList = new HashMap<String, List<String>>();
         
         super_turbo = new ArrayList<>();

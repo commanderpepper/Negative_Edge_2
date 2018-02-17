@@ -3,15 +3,14 @@ package humzaahmad.negative_edge_2.Activites;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
-import humzaahmad.negative_edge_2.Adapters.GameAdapter;
-import humzaahmad.negative_edge_2.Data.CharacterListGetter;
+import humzaahmad.negative_edge_2.Adapters.RecyclerView.CharacterListAdapter;
+import humzaahmad.negative_edge_2.Data.CharacterLists;
 import humzaahmad.negative_edge_2.R;
 
 /**
@@ -21,7 +20,8 @@ import humzaahmad.negative_edge_2.R;
 
 public class GenericGame extends AppCompatActivity {
 
-    ArrayList<String> data;
+    //The list of characters in a game
+    ArrayList<String> characterList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,47 +35,16 @@ public class GenericGame extends AppCompatActivity {
         toolbar.setTitle(game);
         setActionBar(toolbar);
 
-        //Logger log = Logger.getLogger("HUMZA");
-
-        //Logger.getLogger(Level.SEVERE, "game string is " + game);
-        //log.log(Level.SEVERE, game);
-        CharacterListGetter game_to_display = new CharacterListGetter();
-
-        data = game_to_display.getCharacterList(game);
-
-        /*
-
-        data = new ArrayList<>();
-        data.add("Ryu");
-        data.add("Ken");
-        data.add("Chun Li");
-        data.add("Sagat");
-        data.add("Guile");
-        data.add("Fei Long");
-        data.add("Cammy");
-        data.add("Dhalsim");
-        data.add("Balrog");
-        data.add("Vega");
-        data.add("M Bison");
-        data.add("E Honda");
-        data.add("Dee Jay");
-        data.add("T Hawk");
-        data.add("Zangief");
-        data.add("Akuma");
-        data.add("Blanka");
-
-        */
+        characterList = new CharacterLists().getCharacterList(game);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.character_list);
-        GameAdapter gameAdapter = new GameAdapter(data, this);
+        CharacterListAdapter gameAdapter = new CharacterListAdapter(game, characterList, this);
         recyclerView.setAdapter(gameAdapter);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setStackFromEnd(true);
 
         recyclerView.setLayoutManager(layoutManager);
-
-        //recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 
 }

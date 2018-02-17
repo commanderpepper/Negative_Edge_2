@@ -1,4 +1,4 @@
-package humzaahmad.negative_edge_2.Adapters;
+package humzaahmad.negative_edge_2.Adapters.FixedTableHeader;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,18 +16,18 @@ import humzaahmad.negative_edge_2.R;
  * In the future, other adapters might be made for different games
  */
 
-public class CharacterAdapter extends BaseTableAdapter {
+public class STAdapter extends BaseTableAdapter {
     private final Context context;
     private final LayoutInflater inflater;
-    private String [][] table;
+    private String[][] table;
 
-    public CharacterAdapter(Context context, String [][] table) {
+    public STAdapter(Context context, String[][] table) {
         this.context = context;
         inflater = LayoutInflater.from(context);
         setInformation(table);
     }
 
-    public void setInformation(String [][] table) {
+    public void setInformation(String[][] table) {
         this.table = table;
     }
 
@@ -70,21 +70,17 @@ public class CharacterAdapter extends BaseTableAdapter {
      * getColumnCount()-1 is the Notes column
      */
     @Override
-    public int getWidth(int column)
-    {
-        if(column == getColumnCount()-1)
-        {
+    public int getWidth(int column) {
+        //The last column is notes, which is usually the widest column
+        if (column == getColumnCount() - 1) {
             return 1500;
-        }
-        else if(column < 0)
-        {
+        } else if (column < 0) {
             return 425;
-        }
-        else if(column == 1)
-        {
+        } else if (column == 1) {
             return 550;
+        } else {
+            return 450;
         }
-        else {return 450;}
 
     }
 
@@ -98,8 +94,7 @@ public class CharacterAdapter extends BaseTableAdapter {
      * @param column
      * @return a view that will be used for a particular cell
      */
-    public int getLayoutResource(int row, int column)
-    {
+    public int getLayoutResource(int row, int column) {
         final int layoutResource;
         switch (getItemViewType(row, column)) {
             case 0:
@@ -129,22 +124,18 @@ public class CharacterAdapter extends BaseTableAdapter {
      *               item whose view we want. If the column is <code>-1</code> it
      *               is the header.
      * @return a number that indicates a type of row
-     *          <0 is the header
-     *          row % 2 are even rows
-     *          Rest are odd rows
+     * <0 is the header
+     * row % 2 are even rows
+     * Rest are odd rows
      */
     @Override
     public int getItemViewType(int row, int column) {
 
-        if(row<0)
-        {
+        if (row < 0) {
             return 0;
-        }
-        else if (row % 2 == 0)
-        {
+        } else if (row % 2 == 0) {
             return 2;
-        }
-        else
+        } else
             return 1;
 
     }

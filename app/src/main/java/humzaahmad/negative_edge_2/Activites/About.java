@@ -7,8 +7,8 @@ import humzaahmad.negative_edge_2.R;
 
 /**
  * @author Humza Ahmad, commanderpepper
- * This is the About page for the app.
- * Can be accessed from the Toolbar menu.
+ *         This is the About page for the app.
+ *         Can be accessed from the Toolbar menu.
  */
 
 public class About extends AppCompatActivity {
