@@ -5,13 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toolbar;
 
 import java.util.ArrayList;
+
+import humzaahmad.negative_edge_2.RecyclerView.CustomAdapter;
 
 /**
  * Created by Humza on 9/23/2017.

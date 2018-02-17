@@ -2,11 +2,11 @@
 <Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/colorPrimary"
+    android:background="@color/capcom_yellow"
     android:minHeight="?attr/actionBarSize"
     android:theme="?attr/actionBarTheme"
     android:title="@string/app_name"
-    android:titleTextColor="#0C4DA2"
+    android:titleTextColor="@color/capcom_blue"
     android:id="@+id/st_toolbar">
 
 </Toolbar>

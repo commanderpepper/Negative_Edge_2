@@ -4,6 +4,11 @@
     android:layout_height="wrap_content"
     android:id="@+id/button"
     android:layout_weight="1"
-    android:text="Button" >
+    android:text="Button"
+    android:textSize="@dimen/button_text_size"
+    android:textColor="@color/capcom_yellow"
+    android:background="@color/capcom_blue"
+    android:layout_margin="4dp"
+    android:foreground="?attr/selectableItemBackground">
 
 </Button>

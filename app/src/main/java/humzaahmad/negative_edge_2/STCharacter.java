@@ -37,6 +37,7 @@ public class STCharacter extends AppCompatActivity {
     String name;
     CharacterAdapter newAdapter;
     CharacterAdapter oldAdapter;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,8 @@ public class STCharacter extends AppCompatActivity {
         Intent intent = getIntent();
         name = intent.getStringExtra("Text");
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.st_toolbar);
+        toolbar = (Toolbar) findViewById(R.id.st_toolbar);
+        toolbar.setTitle(name);
         setActionBar(toolbar);
 
         nameView = (TextView) findViewById(R.id.textView);
@@ -123,12 +125,14 @@ public class STCharacter extends AppCompatActivity {
              * @// TODO: 11/5/2017 Add the special code for each character 
              */
             nameView.setText("Old " + name);
+            toolbar.setTitle("Old " + name);
             isNew = false;
         }
         else
         {
             tableFixHeaders.setAdapter(newAdapter);
             nameView.setText(name);
+            toolbar.setTitle(name);
             isNew = true;
         }
     }
