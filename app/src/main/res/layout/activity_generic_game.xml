@@ -18,14 +18,13 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/character_list"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:numColumns="auto_fit"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/character_toolbar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:clipToPadding="false"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="@dimen/recycler_view_side"
+        android:layout_marginRight="@dimen/recycler_view_side"
+        android:layout_marginBottom="?attr/actionBarSize"
         />
 
 </android.support.constraint.ConstraintLayout>

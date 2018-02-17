@@ -34,12 +34,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:numColumns="auto_fit"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/recycler_view_top_margin"
+        android:layout_marginLeft="@dimen/recycler_view_side"
+        android:layout_marginRight="@dimen/recycler_view_side"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_toolbar"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintLeft_toLeftOf="parent">
     </android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>

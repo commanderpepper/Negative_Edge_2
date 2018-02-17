@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".Activites.GenericGame"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Data.GenericCharacter" />
+        <activity android:name=".Activites.GenericCharacter" />
         <activity android:name=".Activites.STCharacter" />
         <activity android:name=".Activites.About"></activity>
     </application>
