@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:onClick="switchOldAndNew"
         android:layout_gravity="end"
-        android:layout_marginEnd="8dp"/>
+        android:layout_marginEnd="8dp"
+        android:id="@+id/switchButton"/>
 
 </Toolbar>

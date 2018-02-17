@@ -40,8 +40,9 @@ public class CharacterListGetter {
         super_turbo.add("Dee Jay");
         super_turbo.add("T Hawk");
         super_turbo.add("Zangief");
-        super_turbo.add("Akuma");
         super_turbo.add("Blanka");
+        super_turbo.add("Akuma");
+        super_turbo.add("");
 
         alpha_2 = new ArrayList<>();
         alpha_2.add("Adon");

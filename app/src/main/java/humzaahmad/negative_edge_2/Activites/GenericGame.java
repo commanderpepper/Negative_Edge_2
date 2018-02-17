@@ -70,7 +70,11 @@ public class GenericGame extends AppCompatActivity {
         GameAdapter gameAdapter = new GameAdapter(data, this);
         recyclerView.setAdapter(gameAdapter);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setStackFromEnd(true);
+
+        recyclerView.setLayoutManager(layoutManager);
+
         //recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 

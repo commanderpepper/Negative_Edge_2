@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -52,11 +53,11 @@ public class STCharacter extends AppCompatActivity {
         //nameView = (TextView) findViewById(R.id.textView);
         //nameView.setText(name);
 
-        //Switch switchButton = (Switch) findViewById(R.id.switch1);
+        Switch switchButton = (Switch) findViewById(R.id.switchButton);
 
 
         if(name.equals("Akuma")) {
-            //switchButton.setVisibility(View.INVISIBLE);
+            switchButton.setVisibility(View.INVISIBLE);
         }
 
 
