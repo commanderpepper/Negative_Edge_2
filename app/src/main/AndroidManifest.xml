@@ -9,18 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GameSelect"
+        <activity android:name=".Activites.GameSelect"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GenericGame"
+        <activity android:name=".Activites.GenericGame"
             android:screenOrientation="portrait"/>
-        <activity android:name=".GenericCharacter" />
-        <activity android:name=".STCharacter" />
-        <activity android:name=".About"></activity>
+        <activity android:name=".Data.GenericCharacter" />
+        <activity android:name=".Activites.STCharacter" />
+        <activity android:name=".Activites.About"></activity>
     </application>
 
 </manifest>

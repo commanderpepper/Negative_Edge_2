@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import java.util.List;
 
-import humzaahmad.negative_edge_2.GenericGame;
+import humzaahmad.negative_edge_2.Activites.GenericGame;
 import humzaahmad.negative_edge_2.R;
 
 /**

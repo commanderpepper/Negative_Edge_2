@@ -1,4 +1,4 @@
-package humzaahmad.negative_edge_2;
+package humzaahmad.negative_edge_2.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import java.util.List;
+
+import humzaahmad.negative_edge_2.R;
+import humzaahmad.negative_edge_2.Activites.STCharacter;
 
 /**
  * @author Humza Ahmad, commanderpepper

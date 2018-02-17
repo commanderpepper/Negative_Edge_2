@@ -1,4 +1,4 @@
-package humzaahmad.negative_edge_2;
+package humzaahmad.negative_edge_2.Data;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import humzaahmad.negative_edge_2.R;
 
 /**
  * @author Humza Ahmad, commanderpepper

@@ -1,4 +1,4 @@
-package humzaahmad.negative_edge_2;
+package humzaahmad.negative_edge_2.Activites;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,8 @@ import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
+import humzaahmad.negative_edge_2.Activites.About;
+import humzaahmad.negative_edge_2.R;
 import humzaahmad.negative_edge_2.RecyclerView.CustomAdapter;
 
 /**

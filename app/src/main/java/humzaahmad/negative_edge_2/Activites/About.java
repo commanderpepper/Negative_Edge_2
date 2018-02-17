@@ -1,7 +1,9 @@
-package humzaahmad.negative_edge_2;
+package humzaahmad.negative_edge_2.Activites;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import humzaahmad.negative_edge_2.R;
 
 /**
  * @author Humza Ahmad, commanderpepper

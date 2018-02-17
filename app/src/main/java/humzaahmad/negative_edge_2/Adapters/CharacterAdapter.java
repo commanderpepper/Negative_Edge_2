@@ -1,4 +1,4 @@
-package humzaahmad.negative_edge_2;
+package humzaahmad.negative_edge_2.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.inqbarna.tablefixheaders.adapters.BaseTableAdapter;
+
+import humzaahmad.negative_edge_2.R;
 
 /**
  * This is the Character Adapter for the FixedTableLayout library

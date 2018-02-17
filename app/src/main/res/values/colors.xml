@@ -6,4 +6,6 @@
 
     <color name="capcom_yellow">#FFCB08</color>
     <color name="capcom_blue">#303F9F</color>
+    <color name="odd_row_color">#d6dfff</color>
+    <color name="even_row_color">#9fb5fe</color>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="humzaahmad.negative_edge_2.About">
+    tools:context="humzaahmad.negative_edge_2.Activites.About">
 
     <include
         layout="@layout/main_toolbar"

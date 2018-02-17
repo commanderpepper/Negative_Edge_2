@@ -1,4 +1,4 @@
-package humzaahmad.negative_edge_2;
+package humzaahmad.negative_edge_2.Activites;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Toolbar;
 
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import humzaahmad.negative_edge_2.Adapters.GameAdapter;
+import humzaahmad.negative_edge_2.Data.CharacterListGetter;
+import humzaahmad.negative_edge_2.R;
 
 /**
  * Created by Humza on 9/23/2017.
@@ -70,7 +70,8 @@ public class GenericGame extends AppCompatActivity {
         GameAdapter gameAdapter = new GameAdapter(data, this);
         recyclerView.setAdapter(gameAdapter);
 
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 
 }
