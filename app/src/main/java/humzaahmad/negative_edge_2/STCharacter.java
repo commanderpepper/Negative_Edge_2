@@ -51,14 +51,16 @@ public class STCharacter extends AppCompatActivity {
         toolbar.setTitle(name);
         setActionBar(toolbar);
 
-        nameView = (TextView) findViewById(R.id.textView);
-        nameView.setText(name);
+        //nameView = (TextView) findViewById(R.id.textView);
+        //nameView.setText(name);
 
-        Switch switchButton = (Switch) findViewById(R.id.switch1);
+        //Switch switchButton = (Switch) findViewById(R.id.switch1);
+
 
         if(name.equals("Akuma")) {
-            switchButton.setVisibility(View.INVISIBLE);
+            //switchButton.setVisibility(View.INVISIBLE);
         }
+
 
         GetCharacterFromFile getCharacterFromFile = new GetCharacterFromFile(this);
 
@@ -124,14 +126,14 @@ public class STCharacter extends AppCompatActivity {
             /**
              * @// TODO: 11/5/2017 Add the special code for each character 
              */
-            nameView.setText("Old " + name);
+            //nameView.setText("Old " + name);
             toolbar.setTitle("Old " + name);
             isNew = false;
         }
         else
         {
             tableFixHeaders.setAdapter(newAdapter);
-            nameView.setText(name);
+            //nameView.setText(name);
             toolbar.setTitle(name);
             isNew = true;
         }

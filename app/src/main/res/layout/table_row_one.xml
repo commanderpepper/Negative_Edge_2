@@ -7,6 +7,5 @@
     android:background="#d6dfff"
     android:gravity="fill"
     android:orientation="horizontal"
-    android:padding="4dp"
     android:textColor="@android:color/black"
     />

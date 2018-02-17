@@ -32,6 +32,7 @@ public class GenericGame extends AppCompatActivity {
         String game = intent.getStringExtra("Text");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.character_toolbar);
+        toolbar.setTitle(game);
         setActionBar(toolbar);
 
         //Logger log = Logger.getLogger("HUMZA");

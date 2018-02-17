@@ -18,11 +18,13 @@ import java.util.Map;
 public class CharacterListGetter {
 
     public Map<String, List<String>>  characterList;
+    public ArrayList<String> super_turbo;
+    public ArrayList<String> alpha_2;
 
     public CharacterListGetter() {
         characterList = new HashMap<String, List<String>>();
         
-        ArrayList<String> super_turbo = new ArrayList<>();
+        super_turbo = new ArrayList<>();
         super_turbo.add("Ryu");
         super_turbo.add("Ken");
         super_turbo.add("Chun Li");
@@ -41,7 +43,7 @@ public class CharacterListGetter {
         super_turbo.add("Akuma");
         super_turbo.add("Blanka");
 
-        ArrayList<String> alpha_2 = new ArrayList<>();
+        alpha_2 = new ArrayList<>();
         alpha_2.add("Adon");
         alpha_2.add("Akuma");
         alpha_2.add("Birdie");

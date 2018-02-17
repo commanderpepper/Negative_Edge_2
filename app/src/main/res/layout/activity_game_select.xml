@@ -7,14 +7,27 @@
     tools:context="humzaahmad.negative_edge_2.GameSelect">
 
 
-    <include
-        layout="@layout/main_toolbar"
-        android:layout_width="0dp"
+    <Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/st_toolbar" />
+        android:background="@color/capcom_yellow"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:title="@string/app_name"
+        android:titleTextColor="@color/capcom_blue"
+        android:id="@+id/main_toolbar">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info_outline_24dp"
+            android:onClick="goToAbout"
+            android:layout_gravity="end"
+            android:background="@color/capcom_yellow"
+            android:layout_marginEnd="16dp"/>
+
+
+    </Toolbar>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/game_list"
@@ -22,24 +35,11 @@
         android:layout_height="wrap_content"
         android:numColumns="auto_fit"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/st_toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/main_toolbar"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent">
     </android.support.v7.widget.RecyclerView>
 
-    <Button
-        android:id="@+id/about"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="0dp"
-        android:layout_weight="1"
-        android:text="About"
-        android:onClick="goToAbout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_list" />
 </android.support.constraint.ConstraintLayout>

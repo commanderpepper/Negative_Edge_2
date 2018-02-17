@@ -9,5 +9,11 @@
     android:titleTextColor="@color/capcom_blue"
     android:id="@+id/st_toolbar">
 
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="switchOldAndNew"
+        android:layout_gravity="end"
+        android:layout_marginEnd="8dp"/>
 
 </Toolbar>
