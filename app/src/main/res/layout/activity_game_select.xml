@@ -36,6 +36,7 @@
         android:layout_marginLeft="@dimen/recycler_view_side"
         android:layout_marginRight="@dimen/recycler_view_side"
         android:layout_marginTop="@dimen/recycler_view_top_margin"
+        android:paddingBottom="?attr/actionBarSize"
         android:numColumns="auto_fit"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

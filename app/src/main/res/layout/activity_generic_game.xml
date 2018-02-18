@@ -7,24 +7,23 @@
     tools:context="humzaahmad.negative_edge_2.Activites.GenericGame">
 
     <include
+        android:id="@+id/character_toolbar"
         layout="@layout/main_toolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/character_toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/character_list"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/character_toolbar"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="@dimen/recycler_view_side"
         android:layout_marginRight="@dimen/recycler_view_side"
-        android:layout_marginBottom="?attr/actionBarSize"
-        />
+        android:paddingBottom="?attr/actionBarSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/character_toolbar" />
 
 </android.support.constraint.ConstraintLayout>
