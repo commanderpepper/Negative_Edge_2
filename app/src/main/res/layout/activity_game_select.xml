@@ -8,23 +8,23 @@
 
 
     <Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/capcom_yellow"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         android:title="@string/app_name"
-        android:titleTextColor="@color/capcom_blue"
-        android:id="@+id/main_toolbar">
+        android:titleTextColor="@color/capcom_blue">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_info_outline_24dp"
-            android:onClick="goToAbout"
             android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
             android:background="@color/capcom_yellow"
-            android:layout_marginEnd="16dp"/>
+            android:onClick="goToAbout"
+            android:src="@drawable/ic_info_outline_24dp" />
 
 
     </Toolbar>
@@ -33,13 +33,12 @@
         android:id="@+id/game_list"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:numColumns="auto_fit"
-        android:layout_marginTop="@dimen/recycler_view_top_margin"
         android:layout_marginLeft="@dimen/recycler_view_side"
         android:layout_marginRight="@dimen/recycler_view_side"
+        android:layout_marginTop="@dimen/recycler_view_top_margin"
+        android:numColumns="auto_fit"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_toolbar"
-        app:layout_constraintLeft_toLeftOf="parent">
-    </android.support.v7.widget.RecyclerView>
+        app:layout_constraintTop_toBottomOf="@+id/main_toolbar"/>
 
 </android.support.constraint.ConstraintLayout>

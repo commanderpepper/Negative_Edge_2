@@ -17,8 +17,6 @@ public class CharacterLists {
     public Map<String, List<String>> characterList;
     public ArrayList<String> super_turbo;
     public ArrayList<String> alpha_2;
-    public Map<String, String[]> stFileNameList;
-    public Map<String, String> alphaFileNameList;
 
     public CharacterLists() {
         characterList = new HashMap<String, List<String>>();

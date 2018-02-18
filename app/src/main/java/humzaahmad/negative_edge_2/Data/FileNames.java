@@ -13,9 +13,12 @@ public class FileNames {
     public FileNames() {
         fileName = new HashMap<String, Map<String, String>>();
 
-        //I added in SFA2
+        //Adding in a game
         //TODO: Add the test of the character from Street Fighter Alpha 2
         fileName.put("Street Fighter Alpha 2", new HashMap<String, String>());
+
+
+        //Adding in characters and character files
         fileName.get("Street Fighter Alpha 2").put("Adon", "alpha_2_adon");
     }
 }
