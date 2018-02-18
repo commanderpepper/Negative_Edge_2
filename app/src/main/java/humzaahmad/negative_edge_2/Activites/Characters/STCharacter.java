@@ -16,6 +16,7 @@ import java.util.Map;
 import humzaahmad.negative_edge_2.Adapters.FixedTableHeader.STAdapter;
 import humzaahmad.negative_edge_2.Data.CharacterLists;
 import humzaahmad.negative_edge_2.Data.GetCharacterFromFile;
+import humzaahmad.negative_edge_2.Data.STFileNames;
 import humzaahmad.negative_edge_2.R;
 
 /**
@@ -43,7 +44,7 @@ public class STCharacter extends AppCompatActivity {
         setContentView(R.layout.activity_stcharacter);
 
         Intent intent = getIntent();
-        name = intent.getStringExtra("Text");
+        name = intent.getStringExtra("Name");
 
 
         toolbar = (Toolbar) findViewById(R.id.st_toolbar);
@@ -61,8 +62,9 @@ public class STCharacter extends AppCompatActivity {
         //GetCharacterFromFile gets the characterList from the txt files
         GetCharacterFromFile getCharacterFromFile = new GetCharacterFromFile(this);
         CharacterLists characterListGetter = new CharacterLists();
+        STFileNames stFileNames = new STFileNames();
 
-        Map<String, String[]> stList = characterListGetter.stList;
+        Map<String, String[]> stFileNameList = stFileNames.stFileNameList;
 
         //Array List of new character characterList
         ArrayList<String[]> newCharacterData = null;
@@ -70,9 +72,9 @@ public class STCharacter extends AppCompatActivity {
         ArrayList<String[]> oldCharacterData = null;
 
         try {
-            newCharacterData = getCharacterFromFile.readFile(stList.get(name)[0]);
+            newCharacterData = getCharacterFromFile.readFile(stFileNameList.get(name)[0]);
             if (!name.equals("Akuma")) {
-                oldCharacterData = getCharacterFromFile.readFile(stList.get(name)[1]);
+                oldCharacterData = getCharacterFromFile.readFile(stFileNameList.get(name)[1]);
             }
         } catch (IOException e) {
             e.printStackTrace();

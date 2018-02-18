@@ -99,7 +99,6 @@ public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHo
         /**
          * @param view - This is the button view
          *             This class will start a new activity
-         * @// TODO: 11/5/2017 Change which class is passed to the intent. Ideally I should use one adapter for both the game list and character list.
          */
         @Override
         public void onClick(View view) {

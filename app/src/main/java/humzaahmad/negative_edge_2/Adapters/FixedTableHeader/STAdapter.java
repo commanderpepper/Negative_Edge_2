@@ -71,7 +71,6 @@ public class STAdapter extends BaseTableAdapter {
      */
     @Override
     public int getWidth(int column) {
-        //The last column is notes, which is usually the widest column
         if (column == getColumnCount() - 1) {
             return 1500;
         } else if (column < 0) {

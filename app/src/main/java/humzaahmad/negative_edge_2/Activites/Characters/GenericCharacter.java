@@ -3,10 +3,16 @@ package humzaahmad.negative_edge_2.Activites.Characters;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Switch;
+import android.widget.Toolbar;
+
+import com.inqbarna.tablefixheaders.TableFixHeaders;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
+import humzaahmad.negative_edge_2.Adapters.FixedTableHeader.STAdapter;
+import humzaahmad.negative_edge_2.Data.FileNames;
 import humzaahmad.negative_edge_2.Data.GetCharacterFromFile;
 import humzaahmad.negative_edge_2.R;
 
@@ -19,20 +25,41 @@ import humzaahmad.negative_edge_2.R;
 
 public class GenericCharacter extends AppCompatActivity {
 
+    private String[][] characterData;
+    private ArrayList<String[]> characterArray;
+    private TableFixHeaders tableFixHeaders;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generic_character);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra("Text");
+        String characterName = intent.getStringExtra("Name");
+        String gameName = intent.getStringExtra("Game");
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.st_toolbar);
+        //Sets the toolbar title to character name
+        toolbar.setTitle(characterName);
+        setActionBar(toolbar);
+
+        FileNames fileNames = new FileNames();
 
         GetCharacterFromFile getCharacterFromFile = new GetCharacterFromFile(this);
+        String fileName = fileNames.fileName.get(gameName).get(characterName);
 
         try {
-            ArrayList<String[]> characterData = getCharacterFromFile.readFile(name);
+            characterArray = getCharacterFromFile.readFile(fileName);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        characterData = getCharacterFromFile.convertData(characterArray);
+
+        STAdapter tableAdapter = new STAdapter(this, characterData);
+        tableFixHeaders = (TableFixHeaders) findViewById(R.id.char_table);
+        tableFixHeaders.setAdapter(tableAdapter);
+
+
     }
 }

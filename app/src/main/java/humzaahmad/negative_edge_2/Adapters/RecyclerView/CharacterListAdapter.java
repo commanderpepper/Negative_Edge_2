@@ -102,19 +102,18 @@ public class CharacterListAdapter extends RecyclerView.Adapter<CharacterListAdap
         /**
          * @param view - This is the button view
          *             This class will start a new activity
-         * @// TODO: 11/5/2017 Change which class is passed to the intent. Ideally I should use one adapter for both the game list and character list.
          */
         @Override
         public void onClick(View view) {
-            //TODO: 2/17/2018 Change text to name, remember this change must apply STCharacter and GenericCharacter
-            String text = getText();
+            String name = getText();
             //Goes to the character being called. Only goes to ST characters, let's try to change that.
             Intent intent;
             if (game.equals("Super Street Fighter 2 Super Turbo")) {
                 intent = new Intent(context, STCharacter.class);
             } else
                 intent = new Intent(context, GenericCharacter.class);
-            intent.putExtra("Text", text);
+            intent.putExtra("Name", name);
+            intent.putExtra("Game", game);
             context.startActivity(intent);
         }
     }
