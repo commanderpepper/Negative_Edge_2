@@ -15,8 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activites.GenericGame"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".Activites.GenericGame" />
         <activity android:name=".Activites.Characters.GenericCharacter" />
         <activity android:name=".Activites.Characters.STCharacter" />
         <activity android:name=".Activites.About"></activity>
