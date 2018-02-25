@@ -28,6 +28,9 @@ public class GenericCharacter extends AppCompatActivity {
     private String[][] characterData;
     private ArrayList<String[]> characterArray;
     private TableFixHeaders tableFixHeaders;
+    String characterName;
+    String gameName;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +38,10 @@ public class GenericCharacter extends AppCompatActivity {
         setContentView(R.layout.activity_generic_character);
 
         Intent intent = getIntent();
-        String characterName = intent.getStringExtra("Name");
-        String gameName = intent.getStringExtra("Game");
+        characterName = intent.getStringExtra("Name");
+        gameName = intent.getStringExtra("Game");
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.st_toolbar);
+        toolbar = (Toolbar) findViewById(R.id.main_toolbar);
         //Sets the toolbar title to character name
         toolbar.setTitle(characterName);
         setActionBar(toolbar);

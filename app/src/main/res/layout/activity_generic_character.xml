@@ -7,7 +7,7 @@
     tools:context="humzaahmad.negative_edge_2.Activites.Characters.GenericCharacter">
 
     <include
-        layout="layout/character_toolbar"
+        layout="@layout/main_toolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"

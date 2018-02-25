@@ -23,21 +23,37 @@ public class CharacterLists {
 
         super_turbo = new ArrayList<>();
         super_turbo.add("Ryu");
+        super_turbo.add("Old Ryu");
         super_turbo.add("Ken");
+        super_turbo.add("Old Ken");
         super_turbo.add("Chun Li");
+        super_turbo.add("Old Chun Li");
         super_turbo.add("Sagat");
+        super_turbo.add("Old Sagat");
         super_turbo.add("Guile");
+        super_turbo.add("Old Guile");
         super_turbo.add("Fei Long");
+        super_turbo.add("Old Fei Long");
         super_turbo.add("Cammy");
+        super_turbo.add("Old Cammy");
         super_turbo.add("Dhalsim");
+        super_turbo.add("Old Dhalsim");
         super_turbo.add("Balrog");
+        super_turbo.add("Old Balrog");
         super_turbo.add("Vega");
+        super_turbo.add("Old Vega");
         super_turbo.add("M Bison");
+        super_turbo.add("Old M Bison");
         super_turbo.add("E Honda");
+        super_turbo.add("Old E Honda");
         super_turbo.add("Dee Jay");
+        super_turbo.add("Old Dee Jay");
         super_turbo.add("T Hawk");
+        super_turbo.add("Old T Hawk");
         super_turbo.add("Zangief");
+        super_turbo.add("Old Zangief");
         super_turbo.add("Blanka");
+        super_turbo.add("Old Blanka");
         super_turbo.add("Akuma");
 
         alpha_2 = new ArrayList<>();

@@ -33,7 +33,7 @@ public class GameSelect extends AppCompatActivity {
         data.add("Super Street Fighter 2 Super Turbo");
         //characterList.add("Street Fighter Alpha 2");
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.st_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setActionBar(toolbar);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.game_list);

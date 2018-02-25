@@ -3,8 +3,10 @@ package humzaahmad.negative_edge_2.Activites;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.GridLayout;
 import android.widget.Toolbar;
 
 import java.util.ArrayList;
@@ -41,10 +43,9 @@ public class GenericGame extends AppCompatActivity {
         CharacterListAdapter gameAdapter = new CharacterListAdapter(game, characterList, this);
         recyclerView.setAdapter(gameAdapter);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setStackFromEnd(true);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
 
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(gridLayoutManager);
     }
 
 }

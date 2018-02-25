@@ -17,7 +17,6 @@
         </activity>
         <activity android:name=".Activites.GenericGame" />
         <activity android:name=".Activites.Characters.GenericCharacter" />
-        <activity android:name=".Activites.Characters.STCharacter" />
         <activity android:name=".Activites.About"></activity>
     </application>
 

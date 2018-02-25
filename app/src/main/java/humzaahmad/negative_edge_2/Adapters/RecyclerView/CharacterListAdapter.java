@@ -12,7 +12,6 @@ import java.util.List;
 
 import humzaahmad.negative_edge_2.Activites.Characters.GenericCharacter;
 import humzaahmad.negative_edge_2.R;
-import humzaahmad.negative_edge_2.Activites.Characters.STCharacter;
 
 /**
  * @author Humza Ahmad, commanderpepper
@@ -106,12 +105,8 @@ public class CharacterListAdapter extends RecyclerView.Adapter<CharacterListAdap
         @Override
         public void onClick(View view) {
             String name = getText();
-            //Goes to the character being called. Only goes to ST characters, let's try to change that.
             Intent intent;
-            if (game.equals("Super Street Fighter 2 Super Turbo")) {
-                intent = new Intent(context, STCharacter.class);
-            } else
-                intent = new Intent(context, GenericCharacter.class);
+            intent = new Intent(context, GenericCharacter.class);
             intent.putExtra("Name", name);
             intent.putExtra("Game", game);
             context.startActivity(intent);
