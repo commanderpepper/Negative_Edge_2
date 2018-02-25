@@ -72,20 +72,23 @@ public class STAdapter extends BaseTableAdapter {
     @Override
     public int getWidth(int column) {
         if (column == getColumnCount() - 1) {
-            return 1500;
+            return 1400;
         } else if (column < 0) {
-            return 425;
+            return 325;
         } else if (column == 1) {
-            return 550;
+            return 325;
         } else {
-            return 450;
+            return 325;
         }
 
     }
 
     @Override
     public int getHeight(int row) {
-        return 150;
+        if (row < 0) {
+            return 175;
+        } else
+            return 235;
     }
 
     /**
