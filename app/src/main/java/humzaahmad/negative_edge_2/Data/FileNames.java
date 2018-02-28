@@ -13,7 +13,7 @@ public class FileNames {
     public FileNames() {
         fileName = new HashMap<String, Map<String, String>>();
 
-        //Super Turbo
+        //Super Turbo file names
         fileName.put("Super Street Fighter 2 Super Turbo", new HashMap<String, String>());
         fileName.get("Super Street Fighter 2 Super Turbo").put("Ryu", "st_ryu");
         fileName.get("Super Street Fighter 2 Super Turbo").put("Old Ryu", "st_o_ryu");

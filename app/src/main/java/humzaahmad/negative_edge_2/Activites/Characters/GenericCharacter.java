@@ -17,10 +17,8 @@ import humzaahmad.negative_edge_2.Data.GetCharacterFromFile;
 import humzaahmad.negative_edge_2.R;
 
 /**
- * @author Humza Ahmad, commanderpepper
- *         Currently not in use, it will mimic STCharacter but far more simplifed for future games
- *         Also, multiple game characters will use this class
- * @// TODO: 11/5/2017 Flesh out this class so in the future I can use it for games that don't have two versions.
+ *  @author Humza Ahmad, commanderpepper
+ *          This activity is responsible for displaying data for each character
  */
 
 public class GenericCharacter extends AppCompatActivity {
